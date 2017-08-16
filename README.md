@@ -1,3 +1,3 @@
-# CP1404 Practicals
+CP1404 Practicals
 
-My practical work for IT@JCU CP1404
+My practical work for JCU Subject CP1404 - SP2 2017

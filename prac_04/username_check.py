@@ -1,9 +1,10 @@
+
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45',
-             'BaseInterpreterInterface', 'BaseStdIn', 'Command','ExecState',
+             'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState',
              'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 
-username = input("Enter username:")
+username = input("Enter username: ")
 if username in usernames:
-    print("Access granted")
+    print("ACCESS GRANTED")
 else:
-    print("Access denied")
+    print("ACCESS DENIED")

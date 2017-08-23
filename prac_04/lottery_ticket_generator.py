@@ -13,6 +13,7 @@ def main():
         print("Invalid Input")
         number_of_tickets = int(input("How many Quick Picks? "))
 
+
     number = random.randint(1, 45)
     print(number)
 
@@ -23,12 +24,3 @@ main()
 
 
 
-
-
-
-
-for i in range(quick_picks):
-    for j in range(NUMBERS_PER_LINE):
-        number = random.randint(MINIMUM, MAXIMUM)
-        print("{:2}".format(number), end=' ')
-    print()

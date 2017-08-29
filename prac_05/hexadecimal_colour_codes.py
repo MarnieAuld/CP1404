@@ -9,7 +9,8 @@ COLOUR_NAMES = {"MINTGREEN": "#f5fffa", "VIOLET": "#ee82ee", "STEELBLUE": "#4682
 user_colour = str(input("Enter colour name: ").upper().replace(" ", ""))
 while user_colour != "":
     if user_colour in COLOUR_NAMES:
-        print(user_colour, "hexadecimal code: ", COLOUR_NAMES[user_colour])
+        print("Hexadecimal code for {} is:  {}".format(user_colour, COLOUR_NAMES[user_colour]))
     else:
         print("Invalid colour name")
     user_colour = str(input("Enter colour name: ").upper().replace(" ", ""))
+    

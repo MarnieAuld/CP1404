@@ -15,9 +15,6 @@ def main():
 
     for word in word_list:
         max_word_length = max(len(word) for word in word_list)
-
-    for word in word_list:
-#       print("{:>10} : {}".format(word, word_bank[word]))
         print("{:{}} : {}".format(word, max_word_length, word_bank[word]))
 
 main()

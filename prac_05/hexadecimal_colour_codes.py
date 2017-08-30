@@ -1,5 +1,5 @@
 """
-Hexadecimal colours in a dictionary
+Print requested hexadecimal colours in a dictionary
 """
 
 COLOUR_NAMES = {"MINTGREEN": "#f5fffa", "VIOLET": "#ee82ee", "STEELBLUE": "#4682b4", "SANDYBROWN": "#f4a460",

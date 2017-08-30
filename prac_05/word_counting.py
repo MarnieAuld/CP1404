@@ -2,7 +2,7 @@
 
 def main():
     word_bank = {}
-#    text = input("Text: ").lower()
+    #    text = input("Text: ").lower()
     text = "this is a collection of words of nice words this is a fun thing it is"
     words = text.split()
     for word in words:
@@ -13,8 +13,8 @@ def main():
     word_list = list(word_bank)
     word_list.sort()
 
+    max_word_length = max(len(word) for word in word_list)
     for word in word_list:
-        max_word_length = max(len(word) for word in word_list)
         print("{:{}} : {}".format(word, max_word_length, word_bank[word]))
 
 main()

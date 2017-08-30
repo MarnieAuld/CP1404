@@ -13,4 +13,3 @@ while user_colour != "":
     else:
         print("Invalid colour name")
     user_colour = str(input("Enter colour name: ").upper().replace(" ", ""))
-    

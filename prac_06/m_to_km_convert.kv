@@ -5,9 +5,9 @@
     color: 1, 1, 0, 1
 
 <TextInput>
-    canvas.after:
+    canvas.before:
         Color:
-            rgba: 1, 1, 0, 1
+            rgba: 1, 0, 0, 1
 
 BoxLayout:
     orientation: 'vertical'
@@ -27,9 +27,8 @@ BoxLayout:
             Button:
                 text: 'Down'
                 on_press: app.handle_increment(-1)
-    Button:
+    Label:
         text: 'Miles to Kilometres'
-        on_press: app.handle_calculate()
     Label:
         id: output_label
         font_size: 48

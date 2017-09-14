@@ -10,6 +10,13 @@ class MilesToKilometresConvert(App):
         self.root = Builder.load_file('m_to_km_convert.kv')
         return self.root
 
+    def get_valid_input(self):
+        try:
+            user_input = float(self.root.ids.input_miles.text)
+            return user_input
+        except ValueError:
+            return 0.0
+
     def handle_calculate(self):
         miles = self.get_valid_input()
         kilometres = miles * 1.60934
@@ -19,12 +26,5 @@ class MilesToKilometresConvert(App):
         display = self.get_valid_input() + increment
         self.root.ids.input_miles.text = str(display)
         self.handle_calculate()
-
-    def get_valid_input(self):
-        try:
-            user_input = float(self.root.ids.input_miles.text)
-            return user_input
-        except ValueError:
-            return 0.0
 
 MilesToKilometresConvert().run()

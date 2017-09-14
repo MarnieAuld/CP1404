@@ -10,8 +10,8 @@ class NameLabelling(App):
         return self.root
 
     def create_widgets(self):
-        self.names = ["Adam", "Barry", "Craig", "David", "Emma"]
-        for name in self.names:
+        names = ["Adam", "Barry", "Craig", "David", "Emma"]
+        for name in names:
             temp_label = Label(text=name)
             self.root.ids.entriesBox.add_widget(temp_label)
 

@@ -7,3 +7,8 @@ class ProgrammingLanguage:
         self.typing = typing
         self.reflection = reflection
         self.year = year
+
+    def __str__(self):
+        """Return string"""
+        return "{}, {} Typing, Reflection={}, First appeared in {}".\
+            format(self.name, self.typing, self.reflection, self.year)

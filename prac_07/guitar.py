@@ -3,6 +3,9 @@ Do-from-scratch Exercises - Guitars
 Store guitar attributes in Guitar class.
 """
 
+CURRENT_YEAR = 2017
+VINTAGE_YEAR = 50
+
 
 class Guitar:
     """Guitar object."""
@@ -19,3 +22,11 @@ class Guitar:
         def __str__(self):
             """Return a string"""
             return "{} ({}) : ${:.2f}".format(self.name, self.year, self.cost)
+
+        def get_age(self):
+            """Returns how old the guitar is in years"""
+            return CURRENT_YEAR - self.year
+
+        def is_vintage(self):
+            """Determines wether the guitar is more than 50 years old and returns TRUE or FALSE"""
+        return self.get_age() >= VINTAGE_YEAR

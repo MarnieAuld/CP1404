@@ -26,8 +26,7 @@ def main():
                 print("Distance must be >= 0")
                 km_to_drive = int(input("How many km do you wish to drive? "))
             user_car.drive(km_to_drive)
-
-
+            # TODO: add a if statement to deal with when km > fuel
             print("{} drove {}km.".format(user_car.name, km_to_drive))
             print()
             print(user_car)

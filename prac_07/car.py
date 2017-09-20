@@ -17,14 +17,13 @@ class Car:
         return "{}, fuel= {}, odometer= {}".format(self.name, self.fuel, self.odometer)
 
     def add_fuel(self, amount):
-        """Add amount to the car's fuel."""
+        """Add amount to the fuel total."""
         self.fuel += amount
 
     def drive(self, distance):
-        """Drive the car a given distance.
-
-        Drive given distance if car has enough fuel
-        or drive until fuel runs out return the distance actually driven.
+        """Drive the car a specified distance.
+        If car has enough fuel, drive distance
+        Else drive until fuel = 0
         """
         if distance > self.fuel:
             distance = self.fuel

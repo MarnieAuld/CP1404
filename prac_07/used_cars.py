@@ -19,5 +19,6 @@ def main():
     print("{} fuel = {}".format(limo.name, limo.fuel))
     limo.drive(115)
     print("{} odometer = {}".format(limo.name, limo.odometer))
+    print("{} units of fuel left".format(limo.fuel))
 
 main()

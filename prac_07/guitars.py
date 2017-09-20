@@ -16,7 +16,7 @@ guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
 
 
 def main():
-    """main function"""
+    """Print output to match sample output"""
     for i, guitar in enumerate(guitars):
         if guitar.is_vintage():
             vintage_string = "(vintage)"

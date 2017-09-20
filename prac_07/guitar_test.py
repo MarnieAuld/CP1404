@@ -9,14 +9,17 @@ ANOTHER_GUITAR_EXPECTED_AGE = 5
 
 
 def main():
-    """......"""
-    Gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
-    Another_Guitar = Guitar("Another Guitar", 2012, 2300.10)
-
-    print("{} get_age() - Expected {}. Got {}".format(Gibson.name, GIBSON_EXPECTED_AGE, Gibson.get_age()))
-    print("{} get_age() - Expected {}. Got {}".format(Another_Guitar.name, ANOTHER_GUITAR_EXPECTED_AGE, Another_Guitar.get_age()))
+    """Test functionality of Guitar Class"""
+    gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
+    another_guitar = Guitar("Another Guitar", 2012, 2300.10)
+    print(gibson)
+    print(another_guitar)
     print()
-    print("{} is_vintage() - Expected {}. Got {}".format(Gibson.name, "True", Gibson.is_vintage()))
-    print("{} is_vintage() - Expected {}. Got {}".format(Another_Guitar.name, "False", Another_Guitar.is_vintage()))
+    print("{} get_age() - Expected {}. Got {}".format(gibson.name, GIBSON_EXPECTED_AGE, gibson.get_age()))
+    print("{} get_age() - Expected {}. Got {}".format(another_guitar.name, ANOTHER_GUITAR_EXPECTED_AGE, another_guitar.get_age()))
+    print()
+    print("{} is_vintage() - Expected {}. Got {}".format(gibson.name, "True", gibson.is_vintage()))
+    print("{} is_vintage() - Expected {}. Got {}".format(another_guitar.name, "False", another_guitar.is_vintage()))
+
 
 main()

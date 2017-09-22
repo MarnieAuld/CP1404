@@ -25,10 +25,10 @@ def main():
             while km_to_drive < 0:
                 print("Distance must be >= 0")
                 km_to_drive = int(input("How many km do you wish to drive? "))
-            user_car.drive(km_to_drive)
-            # TODO: add a if statement to deal with when km > fuel
-            print("{} drove {}km.".format(user_car.name, km_to_drive))
-            print()
+            distance_driven = user_car.drive(km_to_drive)
+            print("The car drove {}km".format(distance_driven), end="")
+            if user_car.fuel == 0:
+                print(" and ran out of fuel", end="")
             print(user_car)
         elif choice == "R":
             refuel_units = int(input("How many units of fuel do you want to add to the car? "))
@@ -43,6 +43,5 @@ def main():
         print(MENU)
         choice = input(">>> ").upper()
     print("Goodbye {}'s driver,".format(user_car.name))
-
 
 main()

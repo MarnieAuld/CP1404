@@ -16,10 +16,12 @@ def main():
                Guitar("Line 6 JTV-59", 2010, 1512.90)]
     for i, guitar in enumerate(guitars):
         # TODO: replace next 4 lines with ternary operator
-        if guitar.is_vintage():
-            vintage_string = "(vintage)"
-        else:
-            vintage_string = ""
+        # if guitar.is_vintage():
+        #     vintage_string = "(vintage)"
+        # else:
+        #     vintage_string = ""
+        vintage_string = "(vintage)" if guitar.is_vintage() else ""
+
         print("Guitar {}: {:>20} ({}), worth ${:10,.2f} {}".
               format(i + 1, guitar.name, guitar.year, guitar.cost, vintage_string))
         # print("Guitar {}: {self.name} ({self.year}), worth ${self.cost}".format(i+1, self = guitar))

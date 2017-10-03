@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 Practical
-Taxi class, derived from Car
+CP1404 Practical 8 - Taxi class
+Derived from Car class
 """
 
 from prac_08.car import Car
@@ -8,7 +8,6 @@ from prac_08.car import Car
 
 class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
-
     price_per_km = 1.23
 
     def __init__(self, name, fuel):
@@ -23,8 +22,7 @@ class Taxi(Car):
                                                              self.price_per_km)
 
     def get_fare(self):
-        """Return the price for the taxi trip."""
-        # round fare result to nearest 10c
+        """Return the price of fare."""
         fare = round(self.price_per_km * self.current_fare_distance, 1)
         return fare
 
@@ -33,7 +31,7 @@ class Taxi(Car):
         self.current_fare_distance = 0
 
     def drive(self, distance):
-        """Drive like parent Car but calculate fare distance as well."""
+        """Base drive function dervied from Car class, + calculated fare distance"""
         distance_driven = super().drive(distance)
         self.current_fare_distance += distance_driven
         return distance_driven

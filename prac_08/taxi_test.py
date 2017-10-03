@@ -7,3 +7,17 @@ CP1404 Practical 8 - TAXI
 5. Print the details and the current fare
 """
 
+from prac_08.taxi import Taxi
+
+
+def main():
+    """Test code for Taxi class."""
+    taxi = Taxi("Prius 1", 100)
+    taxi.start_fare()
+    taxi.drive(40)
+    print(taxi)
+    taxi.start_fare()
+    taxi.drive(100)
+    print(taxi)
+
+main()

@@ -1,5 +1,6 @@
 """
-CP1404 Practical 8 - UNRELIABLE CAR
+CP1404 Practical 8 - unreliable car
+generate random number, and compare to reliability factor of unreliable car
 """
 
 from random import randint

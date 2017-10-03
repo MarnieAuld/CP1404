@@ -52,4 +52,10 @@ def main():
     display_taxis(taxis)
 
 
+def display_taxis(taxis):
+    """Display list of taxis."""
+    # TODO: change to enumerate??
+    for i in taxis:
+        print("{} - {}".format(i, taxis))
+
 main()

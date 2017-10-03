@@ -14,5 +14,5 @@ def main():
     print(fancy_taxi.get_fare())
     print(fancy_taxi)
     print(hummer)
-    
+
 main()

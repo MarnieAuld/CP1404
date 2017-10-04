@@ -10,14 +10,10 @@ At the end of each trip, show them the trip cost and add it to their bill.
 
 from prac_08.silver_service_taxi import SilverServiceTaxi
 from prac_08.taxi import Taxi
-from prac_08.car import Car
 
 taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
-number_of_available_taxis = len(taxis)
-MENU = """q)uit,
-c)hoose taxi,
-d)rive
-"""
+
+MENU = """q)uit, c)hoose taxi, d)rive """
 
 
 def main():
@@ -37,16 +33,16 @@ def main():
             chosen_taxi = taxis[taxi_choice]
         elif menu_choice == "D":
             chosen_taxi.start_fare()
-            distance_to_drive = input("Drive how far? ")
+            distance_to_drive = int(input("Drive how far? "))
             chosen_taxi.drive(distance_to_drive)
             single_trip_cost = chosen_taxi.get_fare()
-            print("Your {} trip cost you ${:2f}".format(chosen_taxi.name, single_trip_cost))
+            print("Your {} trip cost you ${:.2f}".format(chosen_taxi.name, single_trip_cost))
             total_trip_cost += single_trip_cost
         else:
             print("Invalid option")
-        print( "Bill to date: ${:.2f}".format(total_trip_cost))
+        print("Bill to date: ${:.2f}".format(total_trip_cost))
         print(MENU)
-        menu_choice = input(">>> ").lower()
+        menu_choice = input(">>> ").upper()
     print("Total trip cost: ${:.2f}".format(total_trip_cost))
     print("Taxis are now: ")
     display_taxis(taxis)
@@ -54,8 +50,7 @@ def main():
 
 def display_taxis(taxis):
     """Display list of taxis."""
-    # TODO: change to enumerate??
-    for i in taxis:
+    for (i, taxis) in enumerate(taxis):
         print("{} - {}".format(i, taxis))
 
 main()

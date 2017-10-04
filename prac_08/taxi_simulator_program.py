@@ -28,8 +28,9 @@ def main():
             taxi_choice = int(input("Choose taxi: "))
             if taxi_choice > len(taxis):
                 print("Invalid Input - Try Again")
-                print(MENU)
-                menu_choice = input(">>> ").upper()
+                print("Taxis Available: ")
+                display_taxis(taxis)
+                taxi_choice = int(input("Choose taxi: "))
             chosen_taxi = taxis[taxi_choice]
         elif menu_choice == "D":
             chosen_taxi.start_fare()
@@ -48,9 +49,9 @@ def main():
     display_taxis(taxis)
 
 
-def display_taxis(taxis):
+def display_taxis(taxi):
     """Display list of taxis."""
-    for (i, taxis) in enumerate(taxis):
-        print("{} - {}".format(i, taxis))
+    for (i, taxi) in enumerate(taxi):
+        print("{} - {}".format(i, taxi))
 
 main()

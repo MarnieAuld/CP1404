@@ -45,18 +45,17 @@ def get_fixed_filename(filename):
     Loop through characters in filename and replace character.isupper() after "_"
     """
     filename = filename.replace(" ", "_").replace(".TXT", ".txt")
+    characters = list(filename)
     if "_" not in filename:
-        characters = list(filename)
         for index, character in enumerate(characters):
+            # TODO: rewrite to avoid repeated "and"
             if character.isupper() and characters[index-1].isalpha() and index > 0:
                 characters.insert(index, "_")
-        filename = "".join(characters)
     else:
-        characters = list(filename)
         for index, character in enumerate(characters):
             if character == "_":
                 characters[index+1] = characters[index+1].upper()
-        filename = "".join(characters)
+    filename = "".join(characters)
     new_name = filename
     return new_name
 

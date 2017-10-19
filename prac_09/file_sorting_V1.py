@@ -15,7 +15,7 @@ def main():
     os.chdir('FilesToSort')
 
     file_types = ["docx", "doc", "png", "gif", "txt", "xlsx", "xls", "jpg"]
-    
+
     for type_name in file_types:
         os.mkdir(type_name)
         for filename in os.listdir('.'):

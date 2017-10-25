@@ -21,11 +21,6 @@ def main():
         if file_extension not in file_types:
             file_types.append(file_extension)
 
-    # make new directories
-    # os.mkdir('Spreadsheets')
-    # os.mkdir('Images')
-    # os.mkdir('Docs')
-
     for file_type in file_types:
         chosen_folder = input("What category would you like to sort {} files into? ".format(file_type))
         if not os.path.exists(chosen_folder):

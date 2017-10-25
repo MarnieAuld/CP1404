@@ -18,18 +18,16 @@ def calculate_blocks_with_loop():
     print(blocks)
 
 
-# calculate_blocks_with_loop()
-
-
 def calculate_blocks_needed(rows):
     if rows <= 0:
         return 0
     return rows + calculate_blocks_needed(rows - 1)
 
 
-def get_user_input():
+def main():
     user_rows = int(input("How many rows: "))
     print('The number of blocks needed for {} rows is: {} blocks'.format(user_rows, calculate_blocks_needed(user_rows)))
 
 
-# get_user_input()
+# calculate_blocks_with_loop()
+# main()
